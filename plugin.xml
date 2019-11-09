@@ -18,17 +18,15 @@
   under the License.
 -->
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-statusbar"
-    version="2.4.4-dev">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-statusbar" version="2.4.4-dev">
     <name>StatusBar</name>
     <description>Cordova StatusBar Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,statusbar</keywords>
 
     <engines>
-            <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=3.0.0" />
     </engines>
 
     <js-module src="www/statusbar.js" name="statusbar">
@@ -37,7 +35,7 @@
 
     <platform name="android">
         <source-file src="src/android/StatusBar.java" target-dir="src/org/apache/cordova/statusbar" />
-
+        <source-file src="src/android/StatusBarViewHelper.java" target-dir="src/org/apache/cordova/statusbar" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StatusBar">
                 <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
